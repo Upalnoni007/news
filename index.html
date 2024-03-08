@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitra News</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Linking Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Linking Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" class="company-logo">
+                <!-- Your company logo here -->
+                <img src="./logo-removebg-preview (1).png" alt="company logo">
+            </a>
+
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item active" id="home" onclick="onNavItemClick('home')">Home</li>
+                    <li class="hover-link nav-item" id="sports" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="Politics" onclick="onNavItemClick('Politics')">Politics</li>
+                    <li class="hover-link nav-item" id="Stocks" onclick="onNavItemClick('Stocks')">Stocks</li>
+                </ul>
+            </div>
+            
+            <div class="toggle-btn" onclick="toggleDropdown()">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <div class="dropdown-menu" id="dropdown-menu">
+                <ul class="flex">
+                    <li class="hover-link nav-item" onclick="onNavItemClick('home')">Home</li>
+                    <li class="hover-link nav-item" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-item" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" onclick="onNavItemClick('Politics')">Politics</li>
+                    <li class="hover-link nav-item" onclick="onNavItemClick('Stocks')">Stocks</li>
+                </ul>
+                <div class="search-bar flex">
+                    <input id="search-text" type="text" class="news-input" placeholder="e.g Science">
+                    <button id="search-button" class="search-button" onclick="searchNews()">Search</button>
+                </div>
+            </div>
+            
+            <div class="search-bar flex">
+                <input id="search-text1" type="text" class="news-input" placeholder="e.g Science">
+                <button id="search-button1" class="search-button" onclick="searchNews()">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the title</h3>
+                <h6 class="news-source" id="news-source">End Gadget</h6>
+                <p class="news-desc" id="news-desc">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam blanditiis vero repellendus sapiente nisi nihil, assumenda minus tempore sequi saepe dolore placeat, deserunt quam unde accusantium iure. Tempora, dignissimos accusamus.</p>
+            </div>
+        </div>
+    </template>
+
+    <footer>
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.facebook.com/upalnoni.mitra" target="_blank" rel="noopener noreferrer"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/mr.mitterr/?next=%2F" target="_blank" rel="noopener noreferrer"><i class="fa fa-instagram"></i></a>
+                <a href="https://github.com/Upalnoni007" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/upal-mitra-98677b214/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
